@@ -27,6 +27,13 @@
   html,body{margin:0;padding:0;font-family:var(--font-sans);background:var(--paper);}
   *{box-sizing:border-box;}
   a{color:var(--cobalt);}a:hover{color:var(--brick);}
+  .vband{width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);margin-top:14px;}
+  .vtrack{display:flex;align-items:center;width:max-content;will-change:transform;animation:vmarq 70s linear infinite;}
+  @keyframes vmarq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .vv{font-family:var(--font-display);text-transform:uppercase;font-size:clamp(26px,3.4vw,44px);line-height:1.1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px var(--nbs-ink);}
+  .vsep{width:12px;height:12px;flex:none;margin:0 clamp(18px,2.6vw,38px);background:var(--brick);transform:rotate(45deg);border-radius:2px;}
+  @media (prefers-reduced-motion:reduce){.vtrack{animation:none;}.vband{overflow-x:auto;}}
+
 </style>
 </helmet>
 <div class="nbs-grain" style="min-height:100vh;background:radial-gradient(120% 70% at 50% -10%, #fcf8ee 0%, var(--paper) 46%, var(--paper-deep) 100%);padding:clamp(28px,5vw,64px) clamp(16px,4vw,40px) 90px;">
@@ -41,6 +48,7 @@
     </div>
 
     <h1 style="font-family:var(--font-display);font-size:clamp(38px,7vw,68px);line-height:.98;margin:26px 0 0;color:var(--nbs-ink);text-transform:uppercase;">We're hiring a<br><span style="background:var(--nbs-yellow);padding:0 10px;display:inline-block;">technical leader</span></h1>
+    <div style="font-family:var(--font-mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--nbs-ink-faint);margin:14px 0 0;">Atlanta-based</div>
     <p style="font-size:18px;line-height:1.6;color:var(--nbs-ink-soft);max-width:58ch;margin:18px 0 0;text-wrap:pretty;">Come build, test &amp; scale new startups with Neighborhood Studios — a venture studio built to create new companies, not simply invest in ones that already exist.</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:30px 0 0;">
@@ -87,6 +95,11 @@
       <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--kraft-deep);">What we're looking for</div>
       <p style="font-size:15px;line-height:1.65;color:var(--nbs-ink-soft);margin:12px 0 0;text-wrap:pretty;">We're open across experience levels: strong software fundamentals, evidence you can build, learn &amp; finish what you start, and a shipped web or mobile product — professional, startup, or a substantial personal project. We care more about what you can do and how quickly you learn than a title or years. Be ready to walk us through something you built: the problem, the choices, what went wrong &amp; what you learned.</p>
       <p style="font-size:15px;line-height:1.65;color:var(--nbs-ink-soft);margin:12px 0 0;text-wrap:pretty;">Beyond any particular technology: <strong style="color:var(--nbs-ink);">you can find a path forward.</strong> Unfamiliar domain, new framework, incomplete docs, ambiguous spec — you ask for help early, but you don't sit blocked. You investigate, make decisions &amp; ship. Speed matters: think in hours, not days, for a first version. And you should care about design — notice when an experience feels off, then suggest and implement a thoughtful fix. Strong written and verbal English required.</p>
+    </div>
+
+    <div style="margin:34px 0 0;">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--kraft-deep);">Things we care about</div>
+      <div class="vband"><div class="vtrack"><span class="vv">Playful exploration</span><span class="vsep"></span><span class="vv">Ask dumb questions</span><span class="vsep"></span><span class="vv">Find it in the dirt</span><span class="vsep"></span><span class="vv">Steal like an artist</span><span class="vsep"></span><span class="vv">Small teams change the world</span><span class="vsep"></span><span class="vv">Pound the table</span><span class="vsep"></span><span class="vv" aria-hidden="true">Playful exploration</span><span class="vsep" aria-hidden="true"></span><span class="vv" aria-hidden="true">Ask dumb questions</span><span class="vsep" aria-hidden="true"></span><span class="vv" aria-hidden="true">Find it in the dirt</span><span class="vsep" aria-hidden="true"></span><span class="vv" aria-hidden="true">Steal like an artist</span><span class="vsep" aria-hidden="true"></span><span class="vv" aria-hidden="true">Small teams change the world</span><span class="vsep" aria-hidden="true"></span><span class="vv" aria-hidden="true">Pound the table</span><span class="vsep" aria-hidden="true"></span></div></div>
     </div>
 
     <blockquote style="margin:26px 0 0;padding:0 0 0 20px;border-left:3px solid var(--nbs-yellow);font-family:var(--font-serif);font-size:17px;line-height:1.6;color:var(--nbs-ink);font-style:italic;">"Burn your resume. Take risks. Immerse yourself in places where you are really going to learn. Get hands-on experience taking shots on goal around the best people building products."<br><span style="font-family:var(--font-mono);font-style:normal;font-size:12px;color:var(--nbs-ink-faint);">— Mark Pincus, <a href="https://www.amazon.com/dp/0063352575" target="_blank" rel="noopener">Life at the Speed of Play</a></span></blockquote>
